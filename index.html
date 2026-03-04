@@ -1,0 +1,397 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Filipino Artists Timeline</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="header">
+        <div class="logo">Filipino Artists</div>
+        <div class="nav">
+          <div class="nav-item" onclick="scrollToSection('about')">About</div>
+          <div class="nav-item dropdown">
+            <span onclick="scrollToSection('timeline')">Timeline</span>
+            <div class="dropdown-content">
+              <div class="dropdown-item" onclick="filterArtists('all')">All Periods</div>
+              <div class="dropdown-item" onclick="filterArtists('precolonial')">Pre-colonial Art (6185-4400 BC)</div>
+              <div class="dropdown-item" onclick="filterArtists('spanish')">Spanish Colonial Art (1521-1898)</div>
+              <div class="dropdown-item" onclick="filterArtists('american')">American Colonial Art (1898-1946)</div>
+              <div class="dropdown-item" onclick="filterArtists('postcolonial')">Post-colonial Art (1946-1986)</div>
+              <div class="dropdown-item" onclick="filterArtists('contemporary')">Contemporary Art (1980s-Present)</div>
+            </div>
+          </div>
+        </div>
+      </div>
+    <div class="slideshow-container">
+        <div class="slideshow-slides">
+            <div class="slide active" data-text-color="light" style="background-image: url('assets/slideshow-slides/Precolonial_Art.jpeg')">
+                <div class="slide-info">
+                    <h3>Pre-colonial Art Period</h3>
+                    <p>Artistic traditions rooted in spirituality and daily life, showcasing intricate craftsmanship.</p>
+                </div>
+            </div>
+            <div class="slide" data-text-color="light" style="background-image: url('assets/slideshow-slides/Spanish_Colonial_Art.jpeg')">
+                <div class="slide-info">
+                    <h3>Spanish Colonial Art Period</h3>
+                    <p>Religious themes and European influences dominate Filipino art during this era.</p>
+                </div>
+            </div>
+            <div class="slide" data-text-color="dark" style="background-image: url('assets/slideshow-slides/American_Colonial_Art.jpeg')">
+                <div class="slide-info">
+                    <h3>American Colonial Art Period</h3>
+                    <p>Genre paintings and formal portraits reflect the "American way of life."</p>
+                </div>
+            </div>
+            <div class="slide" data-text-color="light" style="background-image: url('assets/slideshow-slides/Postcolonial_Art.jpeg')">
+                <div class="slide-info">
+                    <h3>Post-colonial Art Period</h3>
+                    <p>Modern and post-modern art movements emerge, reflecting societal changes.</p>
+                </div>
+            </div>
+            <div class="slide" data-text-color="dark" style="background-image: url('assets/slideshow-slides/Contemporary_Art.jpeg')">
+                <div class="slide-info">
+                    <h3>Contemporary Art Period</h3>
+                    <p>Diverse artistic expressions thrive in the digital age, blending tradition and innovation.</p>
+                </div>
+            </div>
+        </div>
+    </div>
+
+  <section id="about" class="about">
+    <div class="artist-container" style="padding-top: 150px; padding-bottom: 50px; max-width: 800px; margin: 0 auto;">
+      <div class="artist visible" style="justify-content: center;">
+        <div style="text-align: center; max-width: 600px;">
+          <h1 style="font-size: 2.5rem; font-weight: 300; margin-bottom: 2rem;">The Evolution of Filipino Art</h1>
+          <p style="font-size: 1.1rem; line-height: 1.8; opacity: 0.8; margin-bottom: 2rem;">
+            Explore the rich heritage of Filipino art through this interactive timeline, 
+            showcasing prominent artists who shaped the country's visual arts landscape across different movements and periods.
+          </p>
+          <p style="font-size: 1.1rem; line-height: 1.8; opacity: 0.8;">
+            Scroll down to journey through time, from indigenous art traditions to 
+            contemporary Filipino artists making their mark on the global stage.
+          </p>
+        </div>
+      </div>
+    </div>
+  </section>
+  
+  <section id="timeline" class="timeline">
+    <div class="artist-container">
+      <!-- Pre-colonial Art Period -->
+      <div class="period-intro" data-period="precolonial">
+        <h2>Pre-colonial Art Period (6185 to 4400 BC)</h2>
+        <p>Believed to be the age of the Horticulture/Neolithic period, local communities established art that went beyond mere craft. Pre-colonial traditional art featured religious symbols, everyday activities, and specific decorative patterns influenced by local animistic or Islamic beliefs. Art exchanges with Chinese and Asian traders influenced pottery, weaving, tattoo, jewelry, carving, and metal craft.</p>
+      </div>
+      
+      <!-- Pre-colonial Artists -->
+      <div class="artist" data-period="precolonial">
+        <div class="artist-left">
+          <div class="artist-year">c. 890-710 BC</div>
+          <div class="artist-name">Manunggul Jar Artisans</div>
+          <div class="artist-movement">Neolithic Pottery</div>
+          <div class="artist-desc">
+            Created one of the most significant archaeological finds in the Philippines. The Manunggul Jar shows sophisticated artistry and deep spiritual beliefs through its intricate design and boat-of-the-dead motif.
+          </div>
+        </div>
+        <div class="artist-right">
+        <div class="artist-image">
+          <img class="lazy" 
+              data-src="assets/pre-colonial/Manunggul_Jar_PreColonial.jpg" 
+              alt="The Manunggul Jar"
+              loading="lazy"
+              onclick="openModal('assets/pre-colonial/Manunggul_Jar_PreColonial.jpg', 'The Manunggul Jar')">
+        </div>
+        </div>
+      </div>
+
+      <div class="artist" data-period="precolonial">
+        <div class="artist-left">
+          <div class="artist-year">c. 3000 - 2000 BC</div>
+          <div class="artist-name">Angono Petroglyphs</div>
+          <div class="artist-movement">Rock Art</div>
+          <div class="artist-desc">
+            The oldest known artwork in the Philippines, these rock carvings feature human and animal figures believed to be carved between 3000 BC and 2000 BC.
+          </div>
+        </div>
+        <div class="artist-right">
+          <div class="artist-image">
+            <img class="lazy" 
+                data-src="assets/pre-colonial/Angono_Petroglyph_PreColonial.jpeg"
+                alt="The Angono Petroglyphs" 
+                loading="lazy"
+                onclick="openModal('assets/pre-colonial/Angono_Petroglyph_PreColonial.jpeg', 'The Angono Petroglyphs')">
+          </div>
+        </div>
+      </div>
+
+      <div class="artist" data-period="precolonial">
+        <div class="artist-right">
+          <div class="artist-year">c. 15th Century</div>
+          <div class="artist-name">Bulul Wooden Figures</div>
+          <div class="artist-movement">Wooden Figures</div>
+          <div class="artist-desc">
+            Carved wooden figures representing the Ifugao rice deity, symbolizing fertility and prosperity. These figures are often used in rituals and ceremonies.
+          </div>
+        </div>
+        <div class="artist-left">
+          <div class="artist-image">
+            <img class="lazy" 
+                data-src="assets/pre-colonial/Bulul_Precolonial.jpeg" 
+                alt="The Bulul Wooden Figures Jar"
+                loading="lazy"
+                onclick="openModal('assets/pre-colonial/Bulul_Precolonial.jpeg', 'Bulul Wooden Figures')">
+          </div>
+        </div>
+      </div>
+      
+
+      <!-- Spanish Colonial Period -->
+      <div class="period-intro" data-period="spanish">
+        <h2>Spanish Colonial Art Period (1521-1898)</h2>
+        <p>Filipinos were introduced to formal painting, sculpture, and architecture inspired by Byzantine, Gothic, Baroque, and Rococo art. Religious (Catholic) themes dominated artworks. The elite Filipino class studying abroad brought influences of Neo-Classicism, Romanticism, and hints of impressionism.</p>
+      </div>
+
+      <!-- Spanish Colonial Artists -->
+      <div class="artist" data-period="spanish">
+        <div class="artist-left">
+          <div class="artist-year">1796 - 1834</div>
+          <div class="artist-name">Damián Domingo</div>
+          <div class="artist-movement">Academic Realism</div>
+          <div class="artist-desc">
+            Pioneer of Philippine art education and founder of the first Philippine art academy. Known for his detailed watercolor paintings of Filipino types and costumes.
+          </div>
+        </div>
+        <div class="artist-right">
+          <div class="artist-image">
+            <img class="lazy" 
+                data-src="assets/spanish-colonial/Damian_Domingo_UnIndioNobledeManila_Spanish.jpg" 
+                alt="The Bulul Wooden Figures Jar"
+                loading="lazy"
+                onclick="openModal('assets/spanish-colonial/Damian_Domingo_UnIndioNobledeManila_Spanish.jpg', ' &quot Un indio noble de Manila &quot (A Native Noble Man from Manila)', 'by Damián Domingo')")">
+          </div>
+        </div>
+      </div>
+
+      <div class="artist" data-period="spanish">
+        <div class="artist-left">
+          <div class="artist-year">1855 - 1913</div>
+          <div class="artist-name">Félix Resurrección Hidalgo</div>
+          <div class="artist-movement">Academic Art</div>
+          <div class="artist-desc">
+            One of the great Filipino painters of the late 19th century. Known for his historical pieces and mastery of light and shadow. His painting "El Asesinato del Gobernador Bustamante" depicts a dramatic moment in Philippine history.
+          </div>
+        </div>
+        <div class="artist-right">
+          <div class="artist-image">
+            <img class="lazy" 
+                data-src="assets/spanish-colonial/Felix_ElAsesinatodelGobernadorBustamante.jpg"
+                alt="Felix El Asesinato"
+                loading="lazy"
+                onclick="openModal('assets/spanish-colonial/Felix_ElAsesinatodelGobernadorBustamante.jpg', 'Felix El Asesinato (The Assassination of Governor Fernando Bustamante and His Son)', 'by Félix Resurrección Hidalgo')">
+          </div>
+        </div>
+      </div>
+
+      <div class="artist" data-period="spanish">
+        <div class="artist-right">
+          <div class="artist-year">1855 - 1914</div>
+          <div class="artist-name">Juan Luna</div>
+          <div class="artist-movement">Romanticism</div>
+          <div class="artist-desc">
+            A prominent figure in Philippine art, known for his historical and allegorical paintings. His work "Spoliarium" won a gold medal at the 1884 Madrid Exposition.
+          </div>
+        </div>
+        <div class="artist-left">
+          <div class="artist-image">
+            <img class="lazy" 
+                 data-src="assets/spanish-colonial/Juan_Luna_Spoliarium_SpanishPeriod.jpg" 
+                 alt="Spoliarium"
+                 loading="lazy"
+                 onclick="openModal('assets/spanish-colonial/Juan_Luna_Spoliarium_SpanishPeriod.jpg', 'Spoliarium by Juan Luna')">
+          </div>
+        </div>
+      </div>
+
+      <!-- American Colonial Period -->
+      <div class="period-intro" data-period="american">
+        <h2>American Colonial Art Period (1898-1946)</h2>
+        <p>American influence brought education and value formation following the "American way of life". Art illustration, advertising, and commercial design gained popularity. Painting themes favored genre paintings, landscapes, and still life, while portraits maintained academic formality for high-ranking officials.</p>
+      </div>
+
+      <!-- American Colonial Artists -->
+      <div class="artist" data-period="american">
+        <div class="artist-left">
+          <div class="artist-year">1892 - 1972</div>
+          <div class="artist-name">Fernando Amorsolo</div>
+          <div class="artist-movement">Classical Realism</div>
+          <div class="artist-desc">
+            First National Artist of the Philippines, captured the bombing of Intendencia during WWII, showing his versatility beyond pastoral scenes.
+          </div>
+        </div>
+        <div class="artist-right">
+          <div class="artist-image">
+            <img class="lazy"
+                 data-src="assets/american-colonial/FernandoAmorsolo_AmericanColonial_BombingoftheIntendencia.JPG"
+                 alt="Bombing of the Intendencia"
+                 loading="lazy"
+                 onclick="openModal('assets/american-colonial/FernandoAmorsolo_AmericanColonial_BombingoftheIntendencia.JPG', 'Bombing of the Intendencia by Fernando Amorsolo')">
+          </div>
+        </div>
+      </div>
+
+      <div class="artist" data-period="american">
+        <div class="artist-right">
+          <div class="artist-year">1904 - 1967</div>
+          <div class="artist-name">Dominador Castañeda</div>
+          <div class="artist-movement">Impressionism</div>
+          <div class="artist-desc">
+            Known for his seascapes and landscapes that captured the Filipino coastal life with impressionistic techniques.
+          </div>
+        </div>
+        <div class="artist-left">
+          <div class="artist-image" style="background-image: url('assets/american-colonial/Dominador Castañeda_American Colonial_By the Seashore.jpg')" 
+               onclick="openModal('assets/american-colonial/Dominador Castañeda_American Colonial_By the Seashore.jpg', 'By the Seashore by Dominador Castañeda')"></div>
+        </div>
+      </div>
+
+      <div class="artist" data-period="american">
+        <div class="artist-left">
+          <div class="artist-year">1879 - 1946</div>
+          <div class="artist-name">Jorge Pineda</div>
+          <div class="artist-movement">Realism</div>
+          <div class="artist-desc">
+            A pioneering editorial cartoonist and illustrator who helped establish political cartooning in the Philippines. His work "A Young Nation" reflects the country's aspirations during the American colonial period.
+          </div>
+        </div>
+        <div class="artist-right">
+          <div class="artist-image" style="background-image: url('assets/american-colonial/JorgePineda_AmericanColonial_A Young Nation.jpg')" 
+               onclick="openModal('assets/american-colonial/JorgePineda_AmericanColonial_A Young Nation.jpg', 'by Jorge Pineda')"></div>
+        </div>
+      </div>
+
+      <!-- Post-Colonial Period -->
+      <div class="period-intro" data-period="postcolonial">
+        <h2>Post-Colonial Art Period (1946-1986)</h2>
+        <p>Post-war art experienced significant growth and expansion, divided into Philippine Modern Art (1946-1970) and Philippine Post-Modern Art (1970-1980s). The latter period saw Pop Art, Installation Art, and Performance Art dominating the scene.</p>
+      </div>
+
+      <!-- Post-Colonial Artists -->
+      <div class="artist" data-period="postcolonial">
+        <div class="artist-left">
+          <div class="artist-year">1912 – 1969</div>
+          <div class="artist-name">Carlos Francisco</div>
+          <div class="artist-movement">Modernism</div>
+          <div class="artist-desc">
+            Also known as Botong Francisco, he revitalized the art of mural painting in the Philippines. His works, like "Bayanihan," reflect Filipino heritage, folklore, and nationalism through dynamic compositions and vivid storytelling.
+          </div>
+        </div>
+        <div class="artist-right">
+          <div class="artist-image" style="background-image: url('assets/post-colonial/Carlos_Francisco_PostColon_Bayanihan.JPG')"
+              onclick="openModal('assets/post-colonial/Carlos_Francisco_PostColon_Bayanihan.JPG', 'Bayanihan by Carlos Francisco')"></div>
+        </div>
+      </div>
+
+    <div class="artist" data-period="postcolonial">
+      <div class="artist-left">
+        <div class="artist-year">1924 – 1984</div>
+        <div class="artist-name">Fernando Zóbel</div>
+        <div class="artist-movement">Abstract Expressionism</div>
+        <div class="artist-desc">
+          A Spanish-Filipino painter known for his lyrical abstractions, Zóbel explored movement and light through gestural lines and refined color palettes. His painting "Noche Clara" exemplifies his intellectual and spiritual approach to art.
+        </div>
+      </div>
+      <div class="artist-right">
+        <div class="artist-image" style="background-image: url('assets/post-colonial/Fernando_Zobel_Post Colon_NocheClara.JPG')"
+            onclick="openModal('assets/post-colonial/Fernando_Zobel_Post Colon_NocheClara.JPG', 'Noche Clara by Fernando Zóbel')"></div>
+      </div>
+    </div>
+
+    <div class="artist" data-period="postcolonial">
+      <div class="artist-left">
+        <div class="artist-year">1931 – 1995</div>
+        <div class="artist-name">Jose Joya</div>
+        <div class="artist-movement">Abstract Expressionism</div>
+        <div class="artist-desc">
+          A pioneering figure in modern Philippine art, Joya was known for his vibrant and dynamic abstractions inspired by the tropical landscape. His work "Grandean Arabesque" showcases bold brushwork and layered textures.
+        </div>
+      </div>
+      <div class="artist-right">
+        <div class="artist-image" style="background-image: url('assets/post-colonial/JoseJoya_Post Colon_Grandean_Arabesque.JPG')"
+            onclick="openModal('assets/post-colonial/JoseJoya_Post Colon_Grandean_Arabesque.JPG', 'Grandean Arabesque by Jose Joya')"></div>
+      </div>
+    </div>
+
+      <!-- Contemporary Period -->
+      <div class="period-intro" data-period="contemporary">
+        <h2>Contemporary Art Period (1980s to Present)</h2>
+        <p>The rise of personal computers and new technology created new art mediums for expression. This period also saw revivals of old styles, creating a diverse artistic landscape that continues to evolve.</p>
+      </div>
+
+      <!-- Contemporary Artists -->
+      <div class="artist" data-period="contemporary">
+        <div class="artist-left">
+          <div class="artist-year">1924 - 1994</div>
+          <div class="artist-name">Nena Saguil</div>
+          <div class="artist-movement">Abstract Art</div>
+          <div class="artist-desc">
+            Pioneer of abstract art in the Philippines, known for her cosmic and microscopic imagery that transcended traditional representation.
+          </div>
+        </div>
+        <div class="artist-right">
+          <div class="artist-image" style="background-image: url('assets/contemporary/Nena_Saguil_Abstract_(1961).jpg')" 
+               onclick="openModal('assets/contemporary/Nena_Saguil_Abstract_(1961).jpg', 'Abstract (1961) by Nena Saguil')"></div>
+        </div>
+      </div>
+
+      <div class="artist" data-period="contemporary">
+        <div class="artist-right">
+          <div class="artist-year">1937 - 2013</div>
+          <div class="artist-name">Roberto Chabet</div>
+          <div class="artist-movement">Conceptual Art</div>
+          <div class="artist-desc">
+            Considered the father of Philippine Conceptual Art. His experimental works and installations challenged traditional art forms. He influenced generations of artists as a longtime professor at the University of the Philippines.
+          </div>
+        </div>
+        <div class="artist-left">
+          <div class="artist-image" style="background-image: url('assets/contemporary/Roberto_Chabet_Landscape_with_White_Moon.jpg')" 
+               onclick="openModal('assets/contemporary/Roberto_Chabet_Landscape_with_White_Moon.jpg', 'Landscape with white moon by Roberto Chabet')"></div>
+        </div>
+      </div>
+
+      <div class="artist" data-period="contemporary">
+        <div class="artist-right">
+          <div class="artist-year">1910 - 1997</div>
+          <div class="artist-name">Tony Velasquez</div>
+          <div class="artist-movement">Comic Art</div>
+          <div class="artist-desc">
+            Known as the Father of Philippine Comics. Created "Kenkoy," the first Filipino comic strip character. His work in Tagalog Klasiks helped establish the golden age of Philippine comics.
+          </div>
+        </div>
+        <div class="artist-left">
+          <div class="artist-image" style="background-image: url('assets/contemporary/Tony_Velasquez_TagalogKlasiks(1949).jpg')" 
+               onclick="openModal('assets/contemporary/Tony_Velasquez_TagalogKlasiks(1949).jpg', 'Tagalog klasiks 1949 by Tony Velasquez')"></div>
+        </div>
+      </div>
+  </section>
+  
+  <div class="footer">
+    © 2025 Filipino Artists Timeline | Project For Art Appreciation | Baybay, Martinez, Diaz, Labarete
+  </div>
+  
+  <div class="modal" id="modal">
+    <div class="modal-content">
+      <span class="modal-close" onclick="closeModal()">×</span>
+      <img class="modal-image" id="modal-image" src="" alt="Artwork">
+      <div class="modal-caption" id="modal-caption"></div>
+    </div>
+  </div>
+  
+  <div id="scrollToTop" class="scroll-to-top" onclick="scrollToTop()">
+  ↑
+  </div>
+  <div id="progressBar" class="progress-bar"></div>
+  <script src="script.js"></script>
+</body>
+</html>
